@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - "node"
   - "8"
 cache:
   directories:
@@ -8,6 +7,6 @@ cache:
 install:
   - npm install
 script:
-  - npm run-script build
+  - CI=false npm run-script build
   - npm run clean
   - npm run server-build
